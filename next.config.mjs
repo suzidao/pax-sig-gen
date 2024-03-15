@@ -4,7 +4,7 @@
  */
 
 const nextConfig = {
-  homepage: "/",
+  basePath: "/pax-sig-gen",
   output: "export", // <=== enables static exports
   reactStrictMode: true,
   webpack(config) {
