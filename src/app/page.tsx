@@ -30,7 +30,7 @@ export default function Home() {
   });
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between">
+    <main className="flex min-h-screen flex-col items-center justify-betwee text-black">
       <div
         className="w-full bg-white fixed z-10 grid place-items-center py-2 px-2 sm:px-4 border-b border-gray-500"
         id="container"
