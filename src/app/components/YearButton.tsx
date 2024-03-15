@@ -43,8 +43,6 @@ export default function YearButton(props: Props) {
     }
   };
 
-  const selectedColor = show.pax === "Online" && year === 2021 ? show.colors[1] : show.colors[0];
-
   return (
     <button
       type="button"
@@ -53,7 +51,7 @@ export default function YearButton(props: Props) {
         (isSelected ? "font-medium text-white " : "") +
         (show.pax === "AUS" ? " text-black " : "")
       }
-      style={isSelected ? { backgroundColor: `${selectedColor}` } : { backgroundColor: "white" }}
+      style={isSelected ? { backgroundColor: `${show.color}` } : { backgroundColor: "white" }}
       key={`PAX ${show.pax} ${year}`}
       onClick={selectYear}
     >

@@ -1,10 +1,5 @@
-/**
- * eslint-disable react-hooks/exhaustive-deps
- *
- * @format
- */
-
 /** @format */
+/* eslint-disable react-hooks/exhaustive-deps */
 
 "use client";
 
@@ -129,11 +124,11 @@ export default function ShowBox(props: Props) {
     <div key={show.pax} className="w-full">
       <h1
         className="font-bold text-lg text-left mb-2 transition-colors"
-        style={isActive ? { color: `${show.colors[0]}` } : { color: "#555" }}
+        style={isActive ? { color: `${show.color}` } : { color: "#555" }}
       >
         <button type="button" onClick={toggleShow} className="flex items-center">
           <XIcon
-            fill={isActive ? show.colors[0] : "#555"}
+            fill={isActive ? show.color : "#555"}
             className={
               "relative mr-2 transition-all " +
               (isActive ? "rotate-0 w-4 h-4" : "-rotate-45 w-3 h-3 my-1 mr-2.5 ml-0.5")
@@ -150,7 +145,7 @@ export default function ShowBox(props: Props) {
       >
         <div
           className="w-full px-3 xs:px-4 py-2 flex flex-row flex-nowrap items-center justify-between"
-          style={{ borderBottom: `1px solid ${show.colors[0]}`, background: `${show.colors[0]}66` }}
+          style={{ borderBottom: `1px solid ${show.color}`, background: `${show.color}66` }}
         >
           <label className="w-36 xs:w-auto flex flex-wrap xs:flex-nowrap xs:basis-auto items-center mr-auto">
             <div className="mr-2 whitespace-nowrap">
@@ -159,7 +154,7 @@ export default function ShowBox(props: Props) {
             </div>
             <select
               className="border border-solid p-px my-1"
-              style={{ border: `1px solid ${show.colors[0]}` }}
+              style={{ border: `1px solid ${show.color}` }}
               value={selectedType}
               onChange={handleType}
               name={show.pax + "BadgeSelector"}
@@ -204,7 +199,7 @@ export default function ShowBox(props: Props) {
             )}
           </div>
         </div>
-        <div className="pl-3 xs:pl-4 pt-3 xs:pt-4 pr-2 pb-2 w-full" style={{ background: `${show.colors[0]}44` }}>
+        <div className="pl-3 xs:pl-4 pt-3 xs:pt-4 pr-2 pb-2 w-full" style={{ background: `${show.color}44` }}>
           {allYears.map((year) => {
             return (
               <YearButton

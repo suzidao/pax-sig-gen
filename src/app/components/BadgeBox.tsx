@@ -121,8 +121,6 @@ export default function BadgeBox() {
             style={rowNum > 1 ? { width: `${boxWidth}px` } : { width: "auto" }}
           >
             {myBadges.map((badge, idx) => {
-              const currentColor =
-                badge.show.pax === "Online" && badge.year === 2021 ? badge.show.colors[1] : badge.show.colors[0];
               const shortYear = badge.year.toString().substring(2);
               const currentYear = new Date().getFullYear();
               const currentMonth = new Date().getMonth() + 1;
@@ -142,7 +140,7 @@ export default function BadgeBox() {
                       anta.className +
                       (hasRibbon ? " -mt-[2px] ribbonYear" : " mt-px year")
                     }
-                    style={useBlackBadge || isFuture ? { color: `${currentColor}` } : { color: "white" }}
+                    style={useBlackBadge || isFuture ? { color: `${badge.show.color}` } : { color: "white" }}
                   >
                     {shortYear}
                   </div>
@@ -166,7 +164,7 @@ export default function BadgeBox() {
                   <BadgeIcon
                     width={23}
                     height={29}
-                    style={useBlackBadge ? { color: "black" } : { color: currentColor }}
+                    style={useBlackBadge ? { color: "black" } : { color: badge.show.color }}
                     className={isFuture ? "badge is-future" : "badge"}
                   />
                 </div>

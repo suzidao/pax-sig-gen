@@ -5,7 +5,7 @@ export type Show = {
   first: number;
   last?: number;
   skip?: number[];
-  colors: string[];
+  color: string;
   month: number;
 };
 

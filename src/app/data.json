@@ -4,56 +4,56 @@
       "pax": "West",
       "first": 2004,
       "skip": [2020],
-      "colors": ["#009ddc"],
+      "color": "#009ddc",
       "month": 9
     },
     {
       "pax": "East",
       "first": 2010,
       "skip": [2021],
-      "colors": ["#CE271D"],
+      "color": "#CE271D",
       "month": 2
     },
     {
       "pax": "Dev",
       "first": 2011,
       "last": 2019,
-      "colors": ["#0DA092"],
+      "color": "#0DA092",
       "month": 8
     },
     {
       "pax": "AUS",
       "first": 2013,
       "skip": [2020, 2021],
-      "colors": ["#FCB100"],
+      "color": "#FCB100",
       "month": 10
     },
     {
       "pax": "South",
       "first": 2015,
       "last": 2020,
-      "colors": ["#DD5F00"],
+      "color": "#DD5F00",
       "month": 1
     },
     {
       "pax": "Unplugged",
       "first": 2017,
       "skip": [2020],
-      "colors": ["#904799"],
+      "color": "#904799",
       "month": 12
     },
     {
       "pax": "Online",
       "first": 2020,
       "last": 2021,
-      "colors": ["#18B15D", "#CE271D"],
+      "color": "#18B15D",
       "month": 6
     },
     {
       "pax": "Rising Online",
       "first": 2022,
       "last": 2022,
-      "colors": ["#24A189"],
+      "color": "#24A189",
       "month": 7
     }
   ],
