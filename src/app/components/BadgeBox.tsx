@@ -35,7 +35,7 @@ export default function BadgeBox() {
     }
 
     return () => resizeObserver.disconnect();
-  });
+  }, [myBadges.length, rowNum]);
 
   const handleChange = (e: any) => {
     setRowNum(e.target.value);

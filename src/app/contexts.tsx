@@ -29,7 +29,7 @@ type MyBadgesContext = {
 export const MyBadgesContext = createContext<MyBadgesContext | null>(null);
 
 export function MyBadgesContextProvider({ children }: { children: any }) {
-  const defaultBadgeType = badgeTypes.find((type) => type.name === "Default");
+  const defaultBadgeType = badgeTypes.find((type) => type.name === "Default") as BadgeType;
   const [myBadges, setMyBadges] = useState<Badge[]>([]);
   const [activeShow, setActiveShow] = useState<ShowType>(null);
   const [activeType, setActiveType] = useState<BadgeType>(defaultBadgeType!);
@@ -81,7 +81,7 @@ export function MyBadgesContextProvider({ children }: { children: any }) {
         break;
       case "type":
       case "black":
-        updateBadge(show, year, null, black);
+        updateBadge(show, year, type!, black);
         break;
       default:
         addBadge(show, year, type!, black || false);

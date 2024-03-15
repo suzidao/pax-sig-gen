@@ -13,7 +13,7 @@ export type BadgeType = {
   name: string;
   abbr: string | null;
   color: string | null;
-} | null;
+};
 
 export type Badge = {
   show: Show;

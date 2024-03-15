@@ -30,7 +30,7 @@ export default function YearButton(props: Props) {
     setIsSelected(badgeExists);
 
     !badgeExists && setAllYearsSelected(false);
-  }, [myBadges]);
+  }, [myBadges, setAllYearsSelected, show.pax, year]);
 
   const selectYear = () => {
     if (isSelected) {

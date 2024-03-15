@@ -3,6 +3,7 @@
 "use client";
 
 import data from "../data.json";
+import { BadgeType } from "../types";
 import { useEffect, useState } from "react";
 import { Show } from "../types";
 import XIcon from "../../../public/x.svg";
@@ -36,7 +37,7 @@ export default function ShowBox(props: Props) {
   const [allYearsSelected, setAllYearsSelected] = useState(false);
 
   const findType = (type: string) => {
-    return badgeTypes.find((badgeType) => badgeType.name === type);
+    return badgeTypes.find((badgeType) => badgeType.name === type) as BadgeType;
   };
 
   // compare current month with show month to add future show
@@ -54,7 +55,7 @@ export default function ShowBox(props: Props) {
       let type = findType(selectedType);
       setActiveType(type!);
     }
-  }, [activeType]);
+  }, [activeType, selectedType, setActiveType]);
 
   useEffect(() => {
     if (allYearsSelected) {
@@ -75,7 +76,7 @@ export default function ShowBox(props: Props) {
 
       setMyBadges(updatedBadges);
     }
-  }, [allYearsSelected]);
+  });
 
   const toggleShow = () => {
     if (isActive) {
