@@ -1,0 +1,144 @@
+{
+  "shows": [
+    {
+      "pax": "West",
+      "first": 2004,
+      "skip": [2020],
+      "colors": ["#009ddc"],
+      "month": 9
+    },
+    {
+      "pax": "East",
+      "first": 2010,
+      "skip": [2021],
+      "colors": ["#CE271D"],
+      "month": 2
+    },
+    {
+      "pax": "Dev",
+      "first": 2011,
+      "last": 2019,
+      "colors": ["#0DA092"],
+      "month": 8
+    },
+    {
+      "pax": "AUS",
+      "first": 2013,
+      "skip": [2020, 2021],
+      "colors": ["#FCB100"],
+      "month": 10
+    },
+    {
+      "pax": "South",
+      "first": 2015,
+      "last": 2020,
+      "colors": ["#DD5F00"],
+      "month": 1
+    },
+    {
+      "pax": "Unplugged",
+      "first": 2017,
+      "skip": [2020],
+      "colors": ["#904799"],
+      "month": 12
+    },
+    {
+      "pax": "Online",
+      "first": 2020,
+      "last": 2021,
+      "colors": ["#18B15D", "#CE271D"],
+      "month": 6
+    },
+    {
+      "pax": "Rising Online",
+      "first": 2022,
+      "last": 2022,
+      "colors": ["#24A189"],
+      "month": 7
+    }
+  ],
+  "badgeTypes": [
+    {
+      "name": "Default",
+      "abbr": null,
+      "color": null
+    },
+    {
+      "name": "Enforcer",
+      "abbr": "[E]",
+      "color": "#000000"
+    },
+    {
+      "name": "Enforcer Emeritus",
+      "abbr": "[EMR]",
+      "color": "#000000"
+    },
+    {
+      "name": "Content Creator",
+      "abbr": "CON",
+      "color": "#f7d621"
+    },
+    {
+      "name": "Omeganaut",
+      "abbr": "OMG",
+      "color": "#f7d621"
+    },
+    {
+      "name": "Media",
+      "abbr": "MED",
+      "color": "#f7d621"
+    },
+    {
+      "name": "Exhibitor",
+      "abbr": "EXH",
+      "color": "#B93779"
+    },
+    {
+      "name": "All Access",
+      "abbr": "ALL",
+      "color": "#442e81"
+    },
+    {
+      "name": "Special Guest",
+      "abbr": "SPG",
+      "color": "#CE271D"
+    },
+    {
+      "name": "BYOC",
+      "abbr": "BYOC",
+      "color": "#DD5F00"
+    },
+    {
+      "name": "Vendor",
+      "abbr": "VND",
+      "color": "#97c93c"
+    },
+    {
+      "name": "VIP",
+      "abbr": "VIP",
+      "color": "#97c93c"
+    }
+  ],
+  "legacyTypes": [
+    {
+      "name": "Musical Guest",
+      "abbr": "MUS",
+      "color": "#B93779"
+    },
+    {
+      "name": "Speaker",
+      "abbr": "SPK",
+      "color": "#CE271D"
+    },
+    {
+      "name": "Staff",
+      "abbr": "STF",
+      "color": "#442e81"
+    },
+    {
+      "name": "Contractor",
+      "abbr": "CON",
+      "color": "#97c93c"
+    }
+  ]
+}
