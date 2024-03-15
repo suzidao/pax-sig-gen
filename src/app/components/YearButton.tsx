@@ -48,11 +48,11 @@ export default function YearButton(props: Props) {
     <button
       type="button"
       className={
-        "mr-2 mb-2 w-14 border-solid border-black border py-1 rounded-sm transition-all bg-white " +
+        "mr-2 mb-2 w-14 border-solid border-black border py-1 rounded-sm transition-all " +
         (isSelected ? "font-medium text-white" : "") +
         (show.pax === "AUS" ? " text-black" : "")
       }
-      style={isSelected ? { backgroundColor: `${selectedColor}` } : {}}
+      style={isSelected ? { backgroundColor: `${selectedColor}` } : { backgroundColor: "white" }}
       key={`PAX ${show.pax} ${year}`}
       onClick={selectYear}
     >
