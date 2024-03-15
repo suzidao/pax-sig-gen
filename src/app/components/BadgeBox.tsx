@@ -91,6 +91,7 @@ export default function BadgeBox() {
             # of Rows:
             <input
               className="ml-2 pl-2 border border-solid border-gray-500 w-12"
+              name="rowCounter"
               type="number"
               max={20}
               min={1}
