@@ -30,7 +30,8 @@ export default function YearButton(props: Props) {
     setIsSelected(badgeExists);
 
     !badgeExists && setAllYearsSelected(false);
-  }, [myBadges, setAllYearsSelected, show.pax, year]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [myBadges]);
 
   const selectYear = () => {
     if (isSelected) {

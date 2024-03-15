@@ -2,9 +2,10 @@
  * @format
  * @type {import('next').NextConfig}
  */
+const basePath = process.env.NODE_ENV === "production" ? process.env.PATH_VALUE : "";
 
 const nextConfig = {
-  basePath: process.env.PATH_VALUE,
+  basePath: basePath,
   output: "export", // <=== enables static exports
   reactStrictMode: true,
   webpack(config) {

@@ -1,3 +1,9 @@
+/**
+ * eslint-disable react-hooks/exhaustive-deps
+ *
+ * @format
+ */
+
 /** @format */
 
 "use client";
@@ -55,7 +61,7 @@ export default function ShowBox(props: Props) {
       let type = findType(selectedType);
       setActiveType(type!);
     }
-  }, [activeType, selectedType, setActiveType]);
+  }, [activeType]);
 
   useEffect(() => {
     if (allYearsSelected) {
@@ -76,7 +82,7 @@ export default function ShowBox(props: Props) {
 
       setMyBadges(updatedBadges);
     }
-  });
+  }, [allYearsSelected]);
 
   const toggleShow = () => {
     if (isActive) {
