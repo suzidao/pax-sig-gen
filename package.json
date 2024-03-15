@@ -1,4 +1,5 @@
 {
+  "homepage": ".",
   "name": "pax-sig-gen",
   "version": "0.1.0",
   "private": true,
