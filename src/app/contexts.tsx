@@ -8,8 +8,8 @@ import { Badge, Show, BadgeType } from "./types";
 
 const badgeTypes = data.badgeTypes;
 
-type ShowType = Show | undefined;
-type YearType = number | undefined;
+type ShowType = Show | null;
+type YearType = number | null;
 
 type MyBadgesContext = {
   myBadges: Badge[];
@@ -31,9 +31,9 @@ export const MyBadgesContext = createContext<MyBadgesContext | null>(null);
 export function MyBadgesContextProvider({ children }: { children: any }) {
   const defaultBadgeType = badgeTypes.find((type) => type.name === "Default");
   const [myBadges, setMyBadges] = useState<Badge[]>([]);
-  const [activeShow, setActiveShow] = useState<ShowType>();
-  const [activeType, setActiveType] = useState<BadgeType>(defaultBadgeType);
-  const [activeYear, setActiveYear] = useState<YearType>();
+  const [activeShow, setActiveShow] = useState<ShowType>(null);
+  const [activeType, setActiveType] = useState<BadgeType>(defaultBadgeType!);
+  const [activeYear, setActiveYear] = useState<YearType>(null);
   const [blackBadge, setBlackBadge] = useState<boolean>(false);
 
   const manageBadges = (updateProp: string, show: Show, year: number, type?: BadgeType, black?: boolean) => {
@@ -74,17 +74,17 @@ export function MyBadgesContextProvider({ children }: { children: any }) {
     switch (updateProp) {
       case "year":
         if (!badgeExists) {
-          addBadge(show, year, type, black || false);
+          addBadge(show, year, type!, black || false);
         } else if (badgeExists && year > 0) {
           removeBadge(show, year);
         }
         break;
       case "type":
       case "black":
-        updateBadge(show, year, type, black);
+        updateBadge(show, year, null, black);
         break;
       default:
-        addBadge(show, year, type, black || false);
+        addBadge(show, year, type!, black || false);
         break;
     }
   };

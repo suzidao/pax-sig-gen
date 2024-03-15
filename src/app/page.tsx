@@ -15,7 +15,7 @@ export default function Home() {
 
   const clearShow = (show: string) => {
     setMyBadges(myBadges.filter((badge) => !badge.show.pax.includes(show)));
-    setActiveShow(undefined);
+    setActiveShow(null);
   };
 
   useEffect(() => {

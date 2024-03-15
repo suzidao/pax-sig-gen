@@ -35,7 +35,9 @@ export default function ShowBox(props: Props) {
   const [blackBadge, setBlackBadge] = useState(false);
   const [allYearsSelected, setAllYearsSelected] = useState(false);
 
-  const findType = (type: string) => badgeTypes.find((badgeType) => badgeType.name === type);
+  const findType = (type: string) => {
+    return badgeTypes.find((badgeType) => badgeType.name === type);
+  };
 
   // compare current month with show month to add future show
   const currentMonth = new Date().getMonth() + 1;
@@ -50,7 +52,7 @@ export default function ShowBox(props: Props) {
   useEffect(() => {
     if (!activeType) {
       let type = findType(selectedType);
-      setActiveType(type);
+      setActiveType(type!);
     }
   }, [activeType]);
 

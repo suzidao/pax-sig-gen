@@ -9,13 +9,11 @@ export type Show = {
   month: number;
 };
 
-export type BadgeType =
-  | {
-      name: string;
-      abbr: string | null;
-      color: string | null;
-    }
-  | undefined;
+export type BadgeType = {
+  name: string;
+  abbr: string | null;
+  color: string | null;
+} | null;
 
 export type Badge = {
   show: Show;
