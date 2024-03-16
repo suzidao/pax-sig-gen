@@ -171,10 +171,10 @@ export default function ShowBox(props: Props) {
           <div
             className={
               "flex flex-row flex-wrap basis-full gap-y-2 text-left " +
-              (allYears.length > 1 ? "justify-end" : "justify-start")
+              (allYears.length > 1 ? "justify-end" : "justify-end xs:justify-start")
             }
           >
-            <label className="pl-4 mb-0 pr-1.5 flex items-center justify-self-start whitespace-nowrap">
+            <label className={"pl-4 mb-0 pr-1.5 flex items-center whitespace-nowrap"}>
               <input
                 type="checkbox"
                 className="mr-2"
