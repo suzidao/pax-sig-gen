@@ -49,7 +49,7 @@ export default function BadgeBox() {
 
   const handleClick = () => {
     const savedBadges = document.getElementById("badgeBox");
-    const elements = document.querySelectorAll(".adjust-export");
+    const elements = document.querySelectorAll("div.ribbonTxt");
 
     if (!savedBadges) return;
 
@@ -64,18 +64,19 @@ export default function BadgeBox() {
       pixelRatio: 1,
       height: boxHeight,
       width: boxWidth,
-    }).then((dataURL) => {
-      const img = new Image();
-      img.src = dataURL;
-      img.style.imageRendering = "pixelated";
+    })
+      .then((dataURL) => {
+        const img = new Image();
+        img.src = dataURL;
+        img.style.imageRendering = "pixelated";
 
-      downloadjs(dataURL, "badges.png", "image/png");
-    });
-
-    for (let i = 0; i < elements.length; i++) {
-      elements[i].classList.remove("export-class");
-    }
-
+        downloadjs(dataURL, "badges.png", "image/png");
+      })
+      .then(() => {
+        for (let i = 0; i < elements.length; i++) {
+          elements[i].classList.remove("export-class");
+        }
+      });
     // TODO: get SVG export working
 
     // await toSvg(savedBadges, { cacheBust: true, type: "image/svg+xml" }).then((dataURL) => {

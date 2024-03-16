@@ -35,6 +35,6 @@ svg .future { display: none; }
 
 .export-class {
   &.ribbonTxt {
-    margin-top: -1px;
+    margin-top: -1px !important;
   }
 }
