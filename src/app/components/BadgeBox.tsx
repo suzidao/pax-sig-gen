@@ -62,8 +62,8 @@ export default function BadgeBox() {
     toPng(savedBadges, {
       cacheBust: true,
       pixelRatio: 1,
-      height: boxHeight,
-      width: boxWidth,
+      height: boxHeight + 1,
+      width: boxWidth + 1,
     })
       .then((dataURL) => {
         const img = new Image();
@@ -138,8 +138,10 @@ export default function BadgeBox() {
               const currentMonth = new Date().getMonth() + 1;
               const isFuture =
                 badge.year > currentYear || (badge.year === currentYear && badge.show.month > currentMonth);
+
+              const isUnplugged2019 = badge.year === 2019 && badge.show.pax === "Unplugged";
               const badgeType = badge.type;
-              const ribbonColor = badgeType!.color;
+              const ribbonColor = isUnplugged2019 ? "#B93779" : badgeType!.color;
               const hasRibbon = badgeType!.abbr !== null;
               const useDarkTxt = badgeType!.abbr && ["OMG", "CON", "MED", "VND", "VIP"].includes(badgeType!.abbr);
               const useBlackBadge = badge.black;

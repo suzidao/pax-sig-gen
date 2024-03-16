@@ -161,7 +161,11 @@ export default function ShowBox(props: Props) {
             >
               {badgeTypes.map((type, idx) => {
                 return (
-                  <option key={type.name + idx} value={type.name}>
+                  <option
+                    key={type.name + idx}
+                    value={type.name}
+                    className={show.pax === "Unplugged" && type.abbr === "BYOC" ? "hidden" : ""}
+                  >
                     {type.name}
                   </option>
                 );
