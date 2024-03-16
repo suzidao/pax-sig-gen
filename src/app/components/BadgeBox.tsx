@@ -19,6 +19,12 @@ export default function BadgeBox() {
   const [boxWidth, setBoxWidth] = useState<number>(0);
   const [boxHeight, setBoxHeight] = useState<number>(29);
 
+  const rowOptions = [];
+
+  for (let i = 1; i <= 12; i++) {
+    rowOptions.push(i);
+  }
+
   useEffect(() => {
     const box = document.getElementById("badgeBox");
     if (!box) return;
@@ -41,7 +47,7 @@ export default function BadgeBox() {
     setRowNum(e.target.value);
   };
 
-  const handleClick = async () => {
+  const handleClick = () => {
     const savedBadges = document.getElementById("badgeBox");
     const elements = document.querySelectorAll(".adjust-export");
 
@@ -53,7 +59,7 @@ export default function BadgeBox() {
       }
     }
 
-    await toPng(savedBadges, {
+    toPng(savedBadges, {
       cacheBust: true,
       pixelRatio: 1,
       height: boxHeight,
@@ -89,15 +95,20 @@ export default function BadgeBox() {
           </div>
           <label className="xs:ml-4 text-sm whitespace-nowrap">
             # of Rows:
-            <input
-              className="ml-2 pl-2 border border-solid border-gray-500 w-12"
-              name="rowCounter"
-              type="number"
-              max={20}
-              min={1}
+            <select
+              className="ml-2 pl-1 border border-solid border-gray-500 w-12"
               value={rowNum}
               onChange={handleChange}
-            />
+              name="rowCounter"
+            >
+              {rowOptions.map((num, idx) => {
+                return (
+                  <option key={`row${idx + 1}`} value={num}>
+                    {num}
+                  </option>
+                );
+              })}
+            </select>
           </label>
         </div>
         <div className="flex xs:flex-nowrap flex-col xs:flex-row gap-2 space-between items-center">
