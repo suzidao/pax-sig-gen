@@ -34,14 +34,10 @@ export default function BadgeBox() {
     });
     resizeObserver.observe(box);
 
-    if (rowNum > 1) {
-      setBoxWidth(Math.ceil(myBadges.length / rowNum) * 24);
-    } else {
-      !!box ?? setBoxWidth(box.offsetWidth);
-    }
+    setBoxWidth(Math.ceil(myBadges.length / rowNum) * 24);
 
     return () => resizeObserver.disconnect();
-  }, [myBadges.length, rowNum]);
+  }, [myBadges.length, rowNum, boxWidth, boxHeight]);
 
   const handleChange = (e: any) => {
     setRowNum(e.target.value);
