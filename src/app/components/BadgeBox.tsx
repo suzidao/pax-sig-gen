@@ -139,7 +139,8 @@ export default function BadgeBox() {
               const isFuture =
                 badge.year > currentYear || (badge.year === currentYear && badge.show.month > currentMonth);
 
-              const isUnplugged2019 = badge.year === 2019 && badge.show.pax === "Unplugged";
+              const isUnplugged2019 =
+                badge.year === 2019 && badge.show.pax === "Unplugged" && badge.type.name.includes("Enforcer");
               const badgeType = badge.type;
               const ribbonColor = isUnplugged2019 ? "#B93779" : badgeType!.color;
               const hasRibbon = badgeType!.abbr !== null;
